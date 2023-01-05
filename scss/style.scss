@@ -46,7 +46,7 @@ html {
     text-align: center;
     width: 92%;
 
-    /*&-image::before {
+    &-image::before {
         content: "";
         background: $soft-violet;
         border-radius: 10px 10px 0 0;
@@ -54,7 +54,7 @@ html {
         width: 92%;
         height: 253px;
         opacity: 0.6;
-    }*/
+    }
 
     &-image img {
         border-radius: 10px 10px 0 0;
@@ -117,6 +117,12 @@ html {
         text-align:left;
         width: 1110px;
         justify-self: start;
+
+        &-image::before {
+            border-radius: 0 10px 10px 0;
+            height: 458px;
+            width: 28.9%;
+        }
 
         &-image img {
             border-radius: 0 10px 10px 0;
