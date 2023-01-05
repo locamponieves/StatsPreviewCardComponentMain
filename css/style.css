@@ -41,32 +41,75 @@ html {
   border-radius: 10px 10px 0 0;
   width: 100%;
 }
-.article-title {
-  font-size: 1.9rem;
-  padding: 30px 30px 20px 30px;
+.article-text {
+  padding: 30px;
 }
-.article-title span {
+.article-text-title {
+  font-size: 1.9rem;
+}
+.article-text-title span {
   color: hsl(277deg, 64%, 61%);
 }
-.article-text {
+.article-text-description {
   color: hsla(0deg, 0%, 100%, 0.75);
   font-size: 1rem;
-  padding: 0 40px 20px 40px;
+  line-height: 25px;
+  padding: 15px 10px 20px 10px;
 }
-.article-list li {
+.article-text-list li {
+  list-style: none;
   padding: 15px;
 }
-.article-list li .article-list-text {
+.article-text-list li .article-list-text {
   color: hsla(0deg, 0%, 100%, 0.6);
   font-family: "Lexend Deca", sans-serif;
-  font-weight: 300;
-  text-transform: uppercase;
-  margin-top: 5px;
   font-size: 0.8rem;
+  font-weight: 300;
   letter-spacing: 1.5px;
+  margin-top: 5px;
+  text-transform: uppercase;
 }
-.article-list li:last-child {
-  margin-bottom: 20px;
+
+@media (min-width: 768px) {
+  .container {
+    height: 100vh;
+  }
+  .container picture:nth-child(1) {
+    order: 1;
+  }
+  .article {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: 458px;
+    margin-top: 0;
+    text-align: left;
+    width: 1110px;
+    justify-self: start;
+  }
+  .article-image img {
+    border-radius: 0 10px 10px 0;
+  }
+  .article-text {
+    padding: 70px;
+  }
+  .article-text-title {
+    font-size: 2.3rem;
+  }
+  .article-text-description {
+    font-size: 1rem;
+    padding-left: 0;
+    padding-top: 25px;
+    width: 95%;
+  }
+  .article-text-list {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 50px;
+    width: 84%;
+  }
+  .article-text-list li {
+    padding-left: 0;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

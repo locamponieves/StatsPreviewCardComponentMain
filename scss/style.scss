@@ -36,10 +36,9 @@ html {
     display: flex;
     flex-direction: column;
     justify-content: center;
-}
+}// End Container
 
-// End Container
-
+// Article
 .article {
     background: $dark-desaturated-blue;
     border-radius: 10px;
@@ -62,38 +61,92 @@ html {
         width: 100%;
     }
 
-    &-title {
-        font-size: 1.9rem;
-        padding: 30px 30px 20px 30px;
-
-        span {
-            color: $soft-violet;
-        }
-    }
-
     &-text {
-        color: $slightly-transparent-paragraph;
-        font-size: 1rem;
-        padding: 0 40px 20px 40px;
-    }
+        padding: 30px;
 
-    &-list {
-        li {
-            padding: 15px;
+        &-title {
+            font-size: 1.9rem;
 
-            .article-list-text {
-                color: $slightly-transparent-headings;
-                font-family: $font-Lexend-Deca;
-                font-weight: 300;
-                text-transform: uppercase;
-                margin-top: 5px;
-                font-size: 0.8rem;
-                letter-spacing: 1.5px;
+            span {
+                color: $soft-violet;
             }
         }
 
-        li:last-child {
-            margin-bottom: 20px;
+        &-description {
+            color: $slightly-transparent-paragraph;
+            font-size: 1rem;
+            line-height: 25px;
+            padding: 15px 10px 20px 10px;
+        }
+
+        &-list {
+            li {
+                list-style: none;
+                padding: 15px;
+
+                .article-list-text {
+                    color: $slightly-transparent-headings;
+                    font-family: $font-Lexend-Deca;
+                    font-size: 0.8rem;
+                    font-weight: 300;
+                    letter-spacing: 1.5px;
+                    margin-top: 5px;
+                    text-transform: uppercase;
+                }
+            }
         }
     }
-}
+}// End Article
+
+// Media query
+@media(min-width: 768px) {
+    .container {
+        height: 100vh;
+
+        picture:nth-child(1) {
+            order:1;
+        }
+    }
+
+    // Article
+    .article {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        height: 458px;
+        margin-top: 0;
+        text-align:left;
+        width: 1110px;
+        justify-self: start;
+
+        &-image img {
+            border-radius: 0 10px 10px 0;
+        }
+
+        &-text {
+            padding: 70px;
+
+            &-title {
+                font-size: 2.3rem;
+            }
+
+            &-description {
+                font-size: 1rem;
+                padding-left: 0;
+                padding-top: 25px;
+                width: 95%;
+            }
+
+            &-list {
+                display: flex;
+                justify-content: space-between;
+                padding-top: 50px;
+                width: 84%;
+
+                li {
+                    padding-left: 0;
+                }
+            }
+        }
+
+    }// End Article
+} // End Media query
