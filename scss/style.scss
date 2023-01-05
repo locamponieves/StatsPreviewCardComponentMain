@@ -1,3 +1,99 @@
-body {
-    background: #e9e9e9;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@300;400&display=swap');
+
+// Primary
+$dark-blue: hsl(233, 47%, 7%);
+$dark-desaturated-blue: hsl(244, 38%, 16%);
+$soft-violet: hsl(277, 64%, 61%);
+
+// Neutral
+$white: hsl(0, 0%, 100%);
+$slightly-transparent-paragraph: hsla(0, 0%, 100%, 0.75);
+$slightly-transparent-headings: hsla(0, 0%, 100%, 0.6);
+
+// Fonts
+$font-Inter: 'Inter', sans-serif;
+$font-Lexend-Deca: 'Lexend Deca', sans-serif;
+
+// Reset
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body,
+html {
+    background: $dark-blue;
+    color: $white;
+    font-family: $font-Inter;
+    font-size: 15px;
+}
+
+// Container
+.container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+// End Container
+
+.article {
+    background: $dark-desaturated-blue;
+    border-radius: 10px;
+    margin-top: 30px;
+    text-align: center;
+    width: 92%;
+
+    /*&-image::before {
+        content: "";
+        background: $soft-violet;
+        border-radius: 10px 10px 0 0;
+        position: absolute;
+        width: 92%;
+        height: 253px;
+        opacity: 0.6;
+    }*/
+
+    &-image img {
+        border-radius: 10px 10px 0 0;
+        width: 100%;
+    }
+
+    &-title {
+        font-size: 1.9rem;
+        padding: 30px 30px 20px 30px;
+
+        span {
+            color: $soft-violet;
+        }
+    }
+
+    &-text {
+        color: $slightly-transparent-paragraph;
+        font-size: 1rem;
+        padding: 0 40px 20px 40px;
+    }
+
+    &-list {
+        li {
+            padding: 15px;
+
+            .article-list-text {
+                color: $slightly-transparent-headings;
+                font-family: $font-Lexend-Deca;
+                font-weight: 300;
+                text-transform: uppercase;
+                margin-top: 5px;
+                font-size: 0.8rem;
+                letter-spacing: 1.5px;
+            }
+        }
+
+        li:last-child {
+            margin-bottom: 20px;
+        }
+    }
 }
