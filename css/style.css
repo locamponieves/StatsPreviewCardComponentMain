@@ -28,14 +28,17 @@ html {
   text-align: center;
   width: 92%;
 }
+.article-image {
+  position: relative;
+}
 .article-image::before {
   content: "";
-  background: hsl(277deg, 64%, 61%);
-  border-radius: 10px 10px 0 0;
   position: absolute;
-  width: 92%;
-  height: 253px;
-  opacity: 0.6;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(117, 55, 155, 0.6);
 }
 .article-image img {
   border-radius: 10px 10px 0 0;
@@ -85,11 +88,6 @@ html {
     text-align: left;
     width: 1110px;
     justify-self: start;
-  }
-  .article-image::before {
-    border-radius: 0 10px 10px 0;
-    height: 458px;
-    width: 28.9%;
   }
   .article-image img {
     border-radius: 0 10px 10px 0;
