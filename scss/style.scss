@@ -47,23 +47,10 @@ html {
     margin-top: 30px;
     text-align: center;
     width: 92%;
-    
-    &-image {
-        position: relative;
-    }
-
-    &-image::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        background-color: rgba(117, 55, 155, 0.6);
-    }
 
     &-image img {
         border-radius: 10px 10px 0 0;
+        filter: opacity(0.4) drop-shadow(0 0 0 #f700ff); 
         width: 100%;
     }
 

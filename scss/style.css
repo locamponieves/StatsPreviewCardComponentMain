@@ -24,13 +24,25 @@ html {
 .article {
   background: hsl(244deg, 38%, 16%);
   border-radius: 10px;
+  margin-bottom: 10px;
   margin-top: 30px;
   text-align: center;
   width: 92%;
 }
+.article-image {
+  position: relative;
+}
+.article-image::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(117, 55, 155, 0.6);
+}
 .article-image img {
   border-radius: 10px 10px 0 0;
-  filter: opacity(0.4) drop-shadow(0 0 0 #f700ff);
   width: 100%;
 }
 .article-text {
@@ -102,6 +114,4 @@ html {
   .article-text-list li {
     padding-left: 0;
   }
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
